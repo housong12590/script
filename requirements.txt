@@ -1,2 +1,0 @@
-websocket-client
-git+https://github.com/housong12590/flask-session.git@master
