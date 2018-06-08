@@ -1,7 +1,13 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
 import re
 import os
 import io
+
 import sys
+
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 lists = [
     {'key': 'TOKEN', 'exp': r'token="(\w*?)"'},
@@ -9,7 +15,10 @@ lists = [
     {'key': 'PRIVATE_KEY', 'exp': r'n.setPrivateKey\("`(.*?)`"\)'},
     {'key': 'BASE_URL', 'exp': r'baseURL="(.*?)"'},
     {'key': 'APP_VERSION', 'exp': r'\$\.get\("(.*?)",'},
-    {'key': 'IOS_DOWNLOAD_URL', 'exp': r'https://www.pgyer\.com/o5Ee'}
+    {'key': 'IOS_DOWNLOAD_URL', 'exp': r'https://www.pgyer\.com/o5Ee'},
+    {'key': 'VIDEO_RECOMMEND', 'exp': r'var url_video_recommend = "(.*?)";'},
+    {'key': 'VIDEO_INFO', 'exp': r'var url_video_info = "(.*?)";'},
+    {'key': 'SHOP_H5', 'exp': r"var url_shop_h5 = '(.*?)';"},
 ]
 
 
@@ -33,21 +42,21 @@ def replace(text):
 
 def search(text):
     for item in lists:
-        if item.get('key', None):
+        if item.get('env', None):
             result = re.findall(item.get('exp'), text)
             if len(result) != 0:
                 item['value'] = result[0]
+    print(lists)
 
 
 def get_environ_value():
     for item in lists:
         value = os.environ.get(item['key'])
         item['env'] = value
-        print(item.get('key', value))
 
 
 def open_file(path):
-    file = io.open(path, 'r', encoding='utf8')
+    file = io.open(path, 'r', encoding='utf-8')
     if file is None:
         raise ValueError('File does not exist')
     text = file.read()
@@ -57,8 +66,12 @@ def open_file(path):
 
 
 def save_file(path, text):
-    os.remove(path)
-    file = io.open(path, 'w', encoding='utf8')
+    # os.remove(path)
+    file = io.open(path, 'wb')
+    text = text.encode('utf-8')
+    text = unicode(text, 'utf-8')
+    import codecs
+    file.write(codecs.BOM_UTF8)
     file.write(text)
     file.close()
 
@@ -66,12 +79,11 @@ def save_file(path, text):
 def main():
     get_environ_value()
     args = sys.argv[1:]
-
     for path in args:
         abspath = os.path.abspath('./' + path)
         open_file(abspath)
 
-    if args is None:
+    if len(args) == 0:
         path = vue_js_path()
         open_file(path)
 

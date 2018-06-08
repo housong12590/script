@@ -1,15 +1,1 @@
-import re
-
-exp1 = r'var url_video_recommend = "(.*?)";'
-exp2 = r'var url_video_info = "(.*?)";'
-exp3 = r"var url_shop_h5 = '(.*?)';"
-file = open('test/api.js', 'r', encoding='utf8')
-content = file.read()
-
-result1 = re.findall(exp1, content)
-result2 = re.findall(exp2, content)
-result3 = re.findall(exp3, content)
-print(result1)
-print(result2)
-print(result3)
-file.close()
+{"code_registry": "http://housong:pss123546@git.jiankanghao.net/haiwei/tcmipr.git", "image_name": "haiwei/tcmipr", "host": "192.168.0.212:9393", "tag": "20180601143356", "notify": "ding//d5bd95ab90a2febd06dd3ce9ba7b6d18a0c9cd086d344c63fc069f624dd65afc", "message": "退出登录前端", "port": "5000", "name": "tcmipr", "send": "true", "branch": "develop"}

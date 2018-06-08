@@ -2,7 +2,7 @@
 //var url_video_recommend = "http://192.168.0.19:80/tcm-live-rest/api/v1/video/recommendation"
 var url_video_recommend = "https://api.lb.jiankanghao.net/api/v1/video/recommendation";
 //视频详情
-//var url_video_info = "http://192.168.0.19:80/tcm-live-rest/api/v1/video/info_h5";
+//var url_video_info1 = "http://192.168.0.19:80/tcm-live-rest/api/v1/video/info_h5";
 var url_video_info = "https://api.lb.jiankanghao.net/api/v1/video/info_h5";
 //商城首页
 var url_shop_h5 = 'https://m.jiankanghao.net/wx_index.html';

@@ -1,0 +1,191 @@
+{
+  "code": 20000,
+  "message": "success",
+  "data": [
+    {
+      "name": "212服务器",
+      "clientKey": "08c500f1bbd54862b38661cadff08e13",
+      "proxyMappings": [
+        {
+          "inetPort": 50001,
+          "lan": "192.168.0.211:9000",
+          "name": "sentry(https://error.jiankanghao.net)"
+        },
+        {
+          "inetPort": 50003,
+          "lan": "192.168.0.212:8001",
+          "name": "平台用户系统API"
+        },
+        {
+          "inetPort": 50005,
+          "lan": "192.168.0.210:3306",
+          "name": "MySQL"
+        },
+        {
+          "inetPort": 50006,
+          "lan": "192.168.0.210:6379",
+          "name": "Redis"
+        },
+        {
+          "inetPort": 50009,
+          "lan": "192.168.0.212:9292",
+          "name": "知识库(https://zsk.jiankanghao.net/)"
+        },
+        {
+          "inetPort": 50011,
+          "lan": "192.168.0.212:8012",
+          "name": "邮件发送"
+        },
+        {
+          "inetPort": 50016,
+          "lan": "192.168.0.212:8011",
+          "name": "短信平台"
+        },
+        {
+          "inetPort": 50017,
+          "lan": "192.168.0.240:80",
+          "name": "RancherHA(https://rancher.jiankanghao.net/)"
+        },
+        {
+          "inetPort": 50020,
+          "lan": "192.168.0.212:3004",
+          "name": "健康商城（h5 api）"
+        },
+        {
+          "inetPort": 50022,
+          "lan": "192.168.0.212:3005",
+          "name": "\basclepius_api"
+        },
+        {
+          "inetPort": 50026,
+          "lan": "192.168.0.211:9955",
+          "name": "jenkins(https://jenkins.jiankanghao.net/)"
+        },
+        {
+          "inetPort": 50024,
+          "lan": "192.168.0.211:80",
+          "name": "gitlab(https://git.jiankanghao.net/)"
+        },
+        {
+          "inetPort": 50023,
+          "lan": "192.168.0.210:443",
+          "name": "\bharbor(https://registry.jiankanghao.net/)"
+        },
+        {
+          "inetPort": 50028,
+          "lan": "192.168.0.210:5432",
+          "name": "postgresql"
+        },
+        {
+          "inetPort": 50029,
+          "lan": "192.168.0.212:8014",
+          "name": "mock(https://mock.jiankanghao.net/eolinker)"
+        },
+        {
+          "inetPort": 50032,
+          "lan": "192.168.0.212:818",
+          "name": "健康档案管理后台（开发环境）"
+        },
+        {
+          "inetPort": 50033,
+          "lan": "192.168.0.210:27017",
+          "name": "MongoDB"
+        },
+        {
+          "inetPort": 50036,
+          "lan": "192.168.0.211:9090",
+          "name": "prometheus"
+        },
+        {
+          "inetPort": 50037,
+          "lan": "192.168.0.211:3000",
+          "name": "grafana"
+        },
+        {
+          "inetPort": 50038,
+          "lan": "192.168.0.212:820",
+          "name": "平台用户系统管理后台"
+        },
+        {
+          "inetPort": 50039,
+          "lan": "192.168.0.212:9099",
+          "name": "知识产权(旧)"
+        },
+        {
+          "inetPort": 50041,
+          "lan": "192.168.0.211:9001",
+          "name": "笔记系统(https://notes.jiankanghao.net)"
+        },
+        {
+          "inetPort": 50043,
+          "lan": "192.168.0.212:9393",
+          "name": "知识产权"
+        },
+        {
+          "inetPort": 50044,
+          "lan": "192.168.0.210:9200",
+          "name": "elasticsearch"
+        },
+        {
+          "inetPort": 50045,
+          "lan": "192.168.0.212:8021",
+          "name": "直播后台"
+        },
+        {
+          "inetPort": 50046,
+          "lan": "192.168.0.212:8022",
+          "name": "直播接口"
+        },
+        {
+          "inetPort": 50031,
+          "lan": "192.168.0.211:3306",
+          "name": "211mysql"
+        },
+        {
+          "inetPort": 50048,
+          "lan": "192.168.0.212:9898",
+          "name": "数字图书馆"
+        },
+        {
+          "inetPort": 50052,
+          "lan": "192.168.0.212:834",
+          "name": "live_h5"
+        },
+        {
+          "inetPort": 50053,
+          "lan": "192.168.0.212:9008",
+          "name": "url2pdf"
+        }
+      ],
+      "status": 1
+    },
+    {
+      "name": "集群-Dev",
+      "clientKey": "fa8b22698f9b490e958a3d758caba037",
+      "proxyMappings": [
+        {
+          "inetPort": 50100,
+          "lan": "192.168.0.240:30080",
+          "name": "alex-bk"
+        },
+        {
+          "inetPort": 50101,
+          "lan": "192.168.0.240:30081",
+          "name": "alex"
+        },
+        {
+          "inetPort": 50102,
+          "lan": "192.168.0.240:443",
+          "name": "kubectl"
+        }
+      ],
+      "status": 1
+    },
+    {
+      "name": "测试",
+      "clientKey": "186eee7f508f4ed48af62e62d4639207",
+      "proxyMappings": [],
+      "status": 0
+    }
+  ]
+}
